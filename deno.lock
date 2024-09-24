@@ -1,0 +1,50 @@
+{
+  "version": "3",
+  "remote": {
+    "https://deno.land/std@0.116.0/_util/assert.ts": "2f868145a042a11d5ad0a3c748dcf580add8a0dbc0e876eaa0026303a5488f58",
+    "https://deno.land/std@0.116.0/_util/os.ts": "dfb186cc4e968c770ab6cc3288bd65f4871be03b93beecae57d657232ecffcac",
+    "https://deno.land/std@0.116.0/fs/walk.ts": "31464d75099aa3fc7764212576a8772dfabb2692783e6eabb910f874a26eac54",
+    "https://deno.land/std@0.116.0/path/_constants.ts": "1247fee4a79b70c89f23499691ef169b41b6ccf01887a0abd131009c5581b853",
+    "https://deno.land/std@0.116.0/path/_interface.ts": "1fa73b02aaa24867e481a48492b44f2598cd9dfa513c7b34001437007d3642e4",
+    "https://deno.land/std@0.116.0/path/_util.ts": "2e06a3b9e79beaf62687196bd4b60a4c391d862cfa007a20fc3a39f778ba073b",
+    "https://deno.land/std@0.116.0/path/common.ts": "f41a38a0719a1e85aa11c6ba3bea5e37c15dd009d705bd8873f94c833568cbc4",
+    "https://deno.land/std@0.116.0/path/glob.ts": "ea87985765b977cc284b92771003b2070c440e0807c90e1eb0ff3e095911a820",
+    "https://deno.land/std@0.116.0/path/mod.ts": "4465dc494f271b02569edbb4a18d727063b5dbd6ed84283ff906260970a15d12",
+    "https://deno.land/std@0.116.0/path/posix.ts": "34349174b9cd121625a2810837a82dd8b986bbaaad5ade690d1de75bbb4555b2",
+    "https://deno.land/std@0.116.0/path/separator.ts": "8fdcf289b1b76fd726a508f57d3370ca029ae6976fcde5044007f062e643ff1c",
+    "https://deno.land/std@0.116.0/path/win32.ts": "11549e8c6df8307a8efcfa47ad7b2a75da743eac7d4c89c9723a944661c8bd2e",
+    "https://deno.land/x/jszip@0.11.0/mod.ts": "5661ddc18e9ac9c07e3c5d2483bc912a7022b6af0d784bb7b05035973e640ba1",
+    "https://esm.sh/jszip@3.7.1": "f3872a819b015715edb05f81d973b5cd05d3d213d8eb28293ca5471fe7a71773",
+    "https://esm.sh/v135/jszip@3.7.1/denonext/jszip.mjs": "d31d7f9e0de9c6db3c07ca93f7301b756273d4dccb41b600461978fc313504c9"
+  },
+  "workspace": {
+    "packageJson": {
+      "dependencies": [
+        "npm:@types/glob@^8.1.0",
+        "npm:@types/mocha@^10.0.1",
+        "npm:@types/node@16.x",
+        "npm:@types/vscode@^1.77.0",
+        "npm:@typescript-eslint/eslint-plugin@^5.56.0",
+        "npm:@typescript-eslint/parser@^5.56.0",
+        "npm:@vscode/test-electron@^2.3.0",
+        "npm:@vscode/vsce@^2.19.0",
+        "npm:esbuild@^0.17.14",
+        "npm:eslint@^8.36.0",
+        "npm:glob@^10.2.1",
+        "npm:globstar@^1.0.0",
+        "npm:mocha@^10.2.0",
+        "npm:tree-sitter-c@^0.20.2",
+        "npm:tree-sitter-cli@^0.20.8",
+        "npm:tree-sitter-cpp@^0.20.0",
+        "npm:tree-sitter-go@^0.19.1",
+        "npm:tree-sitter-html@^0.19.0",
+        "npm:tree-sitter-javascript@^0.19.0",
+        "npm:tree-sitter-python@^0.20.1",
+        "npm:tree-sitter-rust@^0.20.3",
+        "npm:tree-sitter-typescript@^0.20.1",
+        "npm:typescript@^4.9.5",
+        "npm:web-tree-sitter@^0.20.8"
+      ]
+    }
+  }
+}

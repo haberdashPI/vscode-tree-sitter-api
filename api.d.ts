@@ -81,14 +81,14 @@ export declare function documentTreeSync(document: vscode.TextDocument, options?
  *
  * @see {@link https://tree-sitter.github.io/tree-sitter/using-parsers#query-syntax}
  */
-export declare function query(language: HasLanguage): (strings: TemplateStringsArray, ...args: any) => Promise<Query>;
+export declare function query(language: HasLanguage): (strings: TemplateStringsArray, ...args: unknown[]) => Promise<Query>;
 export declare function query(language: HasLanguage, source: string): Promise<Query>;
 /**
  * Compiles the given string into a {@link Query} object which can be used to
  * perform queries on nodes of the given language, failing if it is not already
  * {@link ensureLoaded loaded}.
  */
-export declare function querySync(language: HasLanguage): (strings: TemplateStringsArray, ...args: any) => Query;
+export declare function querySync(language: HasLanguage): (strings: TemplateStringsArray, ...args: unknown[]) => Query;
 export declare function querySync(language: HasLanguage, source: string): Query;
 /**
  * Executes the specified function with the result of {@link documentTree()},

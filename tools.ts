@@ -34,7 +34,7 @@ for (const arg of Deno.args) {
 
 const outDir = new URL("out", import.meta.url).pathname;
 
-await Deno.mkdir(outDir).catch(() => {});
+await Deno.mkdir(outDir).catch(() => { });
 await Promise.all(Array.from(tasks, (runTask) => runTask()));
 
 async function buildWasm() {
