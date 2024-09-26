@@ -3,7 +3,7 @@
   "displayName": "Tree Sitter API",
   "description": "The Tree Sitter API made available to other extensions",
   "publisher": "gregoire",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "engines": {
     "vscode": "^1.77.0"
   },
@@ -15,15 +15,13 @@
   "categories": [
     "Other"
   ],
-  "extensionKind": [
-    "ui"
-  ],
-  "main": "./out/extension.js",
+  "browser": "./out/web/extension.js",
   "capabilities": {
     "untrustedWorkspaces": {
       "supported": true
     }
   },
+  "activationEvents": ["*"],
   "contributes": {
     "commands": [
       {
@@ -35,10 +33,11 @@
     ]
   },
   "scripts": {
-    "compile": "yarn run esbuild-base --define:DEV=false --minify",
+    "compile": "yarn run esbuild-web --define:DEV=false --minify",
     "compile:dts": "tsc --project . --declaration --emitDeclarationOnly && ./tools.ts --update-dts",
     "compile:wasm": "./tools.ts --build-wasm",
     "esbuild-base": "esbuild src/extension.ts --bundle --loader:.wasm=file --platform=node --target=node16 --external:vscode --outdir=out",
+    "esbuild-web": "esbuild src/extension.ts --bundle --loader:.wasm=file --platform=browser --target=es2020 --external:vscode --outdir=out/web --external:fs --external:path",
     "install": "./tools.ts --update-text-objects",
     "watch": "yarn run esbuild-base --define:DEV=true --sourcemap --watch",
     "watch:test": "globstar -- esbuild \"src/test/**/*.ts\" --platform=node --format=cjs --target=node16 --outdir=out/test --sourcemap --watch",
