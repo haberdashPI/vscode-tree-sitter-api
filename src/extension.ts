@@ -166,8 +166,8 @@ export function activate(
             ? undefined
             : new vscode.MarkdownString(
               "Tree Sitter scopes\n\n" +
-                "-----\n\n" +
-                tooltip.replace(/\n/g, "  \n"),
+              "-----\n\n" +
+              tooltip.replace(/\n/g, "  \n"),
             );
 
           item.show();
@@ -785,7 +785,7 @@ export function fromRange(
 }
 
 function resolveAssetFilePath(path: string): vscode.Uri {
-  return vscode.Uri.joinPath(extensionContext.extensionUri, "out", path);
+  return vscode.Uri.joinPath(extensionContext.extensionUri, "out/web", path);
 }
 
 function getLanguageSync(language: Language): TreeSitter.Language {

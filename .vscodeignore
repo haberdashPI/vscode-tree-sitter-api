@@ -4,9 +4,6 @@
 !out/*.js
 !out/*.scm
 !out/*.wasm
-!out/web/*.js
-!out/web/*.scm
-!out/web/*.wasm
 !README.md
 !LICENSE
 !package.json
