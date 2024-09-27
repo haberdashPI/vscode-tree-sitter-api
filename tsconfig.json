@@ -17,5 +17,8 @@
     "noImplicitOverride": true,
     "esModuleInterop": true
   },
-  "exclude": ["out/**/*.ts", "tools.ts"]
+  "exclude": [
+    "out/**/*.ts",
+    "tools.ts"
+  ]
 }

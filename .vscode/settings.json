@@ -2,9 +2,36 @@
   "search.exclude": {
     "out": true,
   },
-  "deno.enablePaths": ["tools.ts"],
+  "deno.enablePaths": [
+    "tools.ts"
+  ],
   "typescript.tsc.autoDetect": "off",
   "typescript.format.enable": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#1b9e77",
+    "editorBracketHighlight.foreground2": "#d95f02",
+    "editorBracketHighlight.foreground3": "#7570b3",
+    "editorBracketHighlight.foreground4": "#e7298a",
+    "editorBracketHighlight.foreground5": "#66a61e",
+    "editorBracketHighlight.foreground6": "#e6ab02",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    "titleBar.activeBackground": "#c9e510",
+    "titleBar.activeForeground": "#FFFFFF",
+    "titleBar.inactiveBackground": "#c9e510",
+    "titleBar.inactiveForeground": "#FFFFFF",
+    "titleBar.border": "#c9e510",
+    "activityBar.background": "#c9e510",
+    "activityBar.foreground": "#FFFFFF",
+    "statusBar.background": "#c9e510",
+    "statusBar.foreground": "#FFFFFF",
+    "statusBar.debuggingBackground": "#c9e510",
+    "statusBar.debuggingForeground": "#FFFFFF",
+    "tab.activeBorder": "#c9e510",
+    "iLoveWorkSpaceColors": true,
+    "iLoveWorkSpaceRandom": false
+  },
 }

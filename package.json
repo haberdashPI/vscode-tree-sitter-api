@@ -18,7 +18,7 @@
   "extensionKind": [
     "ui"
   ],
-  "main": "./out/extension.js",
+  "browser": "./out/extension.js",
   "capabilities": {
     "untrustedWorkspaces": {
       "supported": true
@@ -29,8 +29,7 @@
       {
         "command": "tree-sitter.inspect-scopes",
         "title": "Inspect Scopes",
-        "category": "Tree Sitter",
-        "enablement": "tree-sitter.activeEditorIsSupported"
+        "category": "Tree Sitter"
       }
     ]
   },
