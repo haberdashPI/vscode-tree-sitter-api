@@ -2,9 +2,36 @@
   "search.exclude": {
     "out": true,
   },
-  "deno.enablePaths": ["tools.ts"],
+  "deno.enablePaths": [
+    "tools.ts"
+  ],
   "typescript.tsc.autoDetect": "off",
   "typescript.format.enable": true,
   "editor.formatOnSave": true,
-  "editor.rulers": [80],
+  "editor.rulers": [
+    80
+  ],
+  "workbench.colorCustomizations": {
+    "editorBracketHighlight.foreground1": "#1b9e77",
+    "editorBracketHighlight.foreground2": "#d95f02",
+    "editorBracketHighlight.foreground3": "#7570b3",
+    "editorBracketHighlight.foreground4": "#e7298a",
+    "editorBracketHighlight.foreground5": "#66a61e",
+    "editorBracketHighlight.foreground6": "#e6ab02",
+    "editorBracketHighlight.unexpectedBracket.foreground": "#ff0000",
+    "titleBar.activeBackground": "#fc2ac4",
+    "titleBar.activeForeground": "#000000",
+    "titleBar.inactiveBackground": "#fc2ac4",
+    "titleBar.inactiveForeground": "#000000",
+    "titleBar.border": "#fc2ac4",
+    "activityBar.background": "#fc2ac4",
+    "activityBar.foreground": "#000000",
+    "statusBar.background": "#fc2ac4",
+    "statusBar.foreground": "#000000",
+    "statusBar.debuggingBackground": "#fc2ac4",
+    "statusBar.debuggingForeground": "#000000",
+    "tab.activeBorder": "#fc2ac4",
+    "iLoveWorkSpaceColors": true,
+    "iLoveWorkSpaceRandom": false
+  },
 }

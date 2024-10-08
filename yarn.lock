@@ -1664,6 +1664,16 @@ node-addon-api@^4.3.0:
   resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-4.3.0.tgz#52a1a0b475193e0928e98e0426a0d1254782b77f"
   integrity sha512-73sE9+3UaLYYFmDsFZnqCInzPyh3MqIwZO9cw58yIqAZhONrrabrYyYe3TuIqtIiOuTXVhsGau8hcrhhwSsDIQ==
 
+node-addon-api@^8.1.0:
+  version "8.1.0"
+  resolved "https://registry.yarnpkg.com/node-addon-api/-/node-addon-api-8.1.0.tgz#55a573685dd4bd053f189cffa4e6332d2b1f1645"
+  integrity sha512-yBY+qqWSv3dWKGODD6OGE6GnTX7Q2r+4+DfpqxHSHh8x0B4EKP9+wVGLS6U/AM1vxSNNmUEuIV5EGhYwPpfOwQ==
+
+node-gyp-build@^4.8.2:
+  version "4.8.2"
+  resolved "https://registry.yarnpkg.com/node-gyp-build/-/node-gyp-build-4.8.2.tgz#4f802b71c1ab2ca16af830e6c1ea7dd1ad9496fa"
+  integrity sha512-IRUxE4BVsHWXkV/SFOut4qTlagw2aM8T5/vnTsmrHJvVoKueJHRc/JaFND7QDDc61kLYUJ6qlZM3sqTSyx2dTw==
+
 normalize-path@^3.0.0, normalize-path@~3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/normalize-path/-/normalize-path-3.0.0.tgz#0dcd69ff23a1c9b11fd0978316644a0388216a65"
@@ -2192,6 +2202,21 @@ tree-sitter-javascript@^0.19.0:
   integrity sha512-SNykDdNgmlJZhX02ZIu0TQF9P7t847jV7769SxA9XrZ2QXjofQsVTMEi9+LpXZKsI0UoFYI25FnZm3fFm0z2yw==
   dependencies:
     nan "^2.12.1"
+
+tree-sitter-julia@^0.23.0:
+  version "0.23.0"
+  resolved "https://registry.yarnpkg.com/tree-sitter-julia/-/tree-sitter-julia-0.23.0.tgz#64ce7909f4edabc11477ef610336966975d734eb"
+  integrity sha512-xXvNVStNybB/71guiGswXUi8Cbokjed5s98H1mjMa6SqlnwEEE4jysgBtEpat0UkkI01Tg4qIVMJf1q0EMTMpg==
+  dependencies:
+    node-addon-api "^8.1.0"
+    node-gyp-build "^4.8.2"
+
+tree-sitter-markdown@^0.7.1:
+  version "0.7.1"
+  resolved "https://registry.yarnpkg.com/tree-sitter-markdown/-/tree-sitter-markdown-0.7.1.tgz#9411df0b832a4798808eb1ce3434f1cfee3e2196"
+  integrity sha512-hB3sEm1JtfoRUzGvknL9RQrS/LJvbrdI9WfGbU8gE6xMjbbAKHfHrNzh4Oo9JxksfUf6UEMxy91acRajEIOnGQ==
+  dependencies:
+    nan "^2.14.0"
 
 tree-sitter-python@^0.20.1:
   version "0.20.1"

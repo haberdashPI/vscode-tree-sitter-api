@@ -166,8 +166,8 @@ export function activate(
             ? undefined
             : new vscode.MarkdownString(
               "Tree Sitter scopes\n\n" +
-                "-----\n\n" +
-                tooltip.replace(/\n/g, "  \n"),
+              "-----\n\n" +
+              tooltip.replace(/\n/g, "  \n"),
             );
 
           item.show();
@@ -269,6 +269,8 @@ export enum Language {
   Rust = "rust",
   TypeScript = "typescript",
   TypeScriptReact = "tsx",
+  Julia = "julia",
+  Markdown = "markdown",
 }
 
 const allLanguages: readonly Language[] = Object.values(Language);
@@ -287,6 +289,8 @@ const knownLanguageIds: { [languageId: string]: Language } = Object.freeze({
   "rust": Language.Rust,
   "typescript": Language.TypeScript,
   "typescriptreact": Language.TypeScriptReact,
+  "julia": Language.Julia,
+  "markdown": Language.Markdown,
 });
 
 /**
@@ -422,6 +426,14 @@ export function determineLanguage(
 
   if (/\.[cm]?tsx?$/.test(input)) {
     return input.endsWith("x") ? Language.TypeScriptReact : Language.TypeScript;
+  }
+
+  if (input.endsWith(".julia")) {
+    return Language.Julia;
+  }
+
+  if (input.endsWith(".md")) {
+    return Language.Markdown;
   }
 
   return undefined;
