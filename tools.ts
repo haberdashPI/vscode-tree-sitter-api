@@ -1,6 +1,7 @@
 #!/usr/bin/env -S deno run --allow-read=. --allow-write=api.d.ts,data,out --allow-run=../node_modules/tree-sitter-cli/tree-sitter,node_modules/tree-sitter-cli/tree-sitter.exe --allow-net=codeload.github.com,github.com
 
 import { JSZip } from "https://deno.land/x/jszip@0.11.0/mod.ts";
+import { existsSync } from "https://deno.land/std@0.224.0/fs/exists.ts";
 
 function printUsageAndExit(): never {
   console.error(
@@ -34,7 +35,7 @@ for (const arg of Deno.args) {
 
 const outDir = new URL("out", import.meta.url).pathname;
 
-await Deno.mkdir(outDir).catch(() => {});
+await Deno.mkdir(outDir).catch(() => { });
 await Promise.all(Array.from(tasks, (runTask) => runTask()));
 
 async function buildWasm() {
@@ -131,11 +132,19 @@ async function updateTextObjects() {
 
     return inheritedContents.join("\n") + "\n" + contents;
   }
+  const manualTextObjectsDir = new URL("textobjects", import.meta.url).pathname;
 
   Promise.all(languages.map(async (language) => {
     const textObjects = await loadResolvingInherited(language);
 
-    if (textObjects !== undefined) {
+    const manualOverrideFile =
+      `${manualTextObjectsDir}/textobjects-${language}.scm`
+    if (existsSync(manualOverrideFile)) {
+      await Deno.copyFile(
+        manualOverrideFile,
+        `${outDir}/textobjects-${language}.scm`
+      );
+    } else if (textObjects !== undefined) {
       await Deno.writeTextFile(
         `${outDir}/textobjects-${language}.scm`,
         textObjects,

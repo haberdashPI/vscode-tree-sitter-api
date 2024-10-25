@@ -730,8 +730,9 @@ export async function textObjectQueryFor(
       );
 
       result = await query(language, new TextDecoder().decode(contents));
-    } catch {
-      // Ignore.
+    } catch (e) {
+      // DEBUG;
+      throw e;
     }
 
     if (textObjectCache.size === 0) {
