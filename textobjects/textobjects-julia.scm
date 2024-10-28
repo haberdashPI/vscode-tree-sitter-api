@@ -1,4 +1,9 @@
-(function_definition (_) @function.inside .) @function.around
+; TODO: we need a change in the grammar to have a single capture
+; represent all statement inside the block
+(function_definition . (signature)
+                     _? @terminator (#any-of? @terminator "\n" ";")?
+                     _+ @function.inside
+                     _ @end (#eq @end "end")) @function.around
 
 ; (assignment
 ;     left: (call_expression (_)?)
@@ -13,10 +18,10 @@
 (primitive_definition (_)? @class.inside .) @class.around
 
 (argument_list
-  ((_) @parameter.inside . ","? @parameter.around) @parameter.around)
+  ((_) @parameter.inside . ","?) @parameter.around)
 
 (type_parameter_list
-  ((_) @parameter.inside . ","? @parameter.around) @parameter.around)
+  ((_) @parameter.inside . ","?) @parameter.around)
 
 (line_comment) @comment.inside
 
